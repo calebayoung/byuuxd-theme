@@ -1,0 +1,236 @@
+/**
+ * Theme Name: BYU UXD Website Theme
+ * Theme URI: https://github.com/calebayoung/byuuxd-theme
+ * Description: WordPress theme for the BYU UXD Club website.
+ * Author: Caleb Young
+ * Author URI: http://calebayoung.com/
+ */
+
+ @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,600;1,400&display=swap');
+
+:root {
+	--uxd-red-lightest: #fc7c73;
+	--uxd-red-light: #fb574b;
+	--uxd-red: #fa2617;
+	--uxd-red-dark: #f01505;
+	--uxd-red-darkest: #c81104;
+	--byu-grey-darkest: #141414;
+	--byu-grey-dark: #666;
+	--byu-grey-medium-dark: #8f8f8f;
+	--byu-grey-medium: #c5c5c5;
+	--byu-grey-medium-light: #e6e6e6;
+	--byu-grey-light: #f4f4f4;
+	--byu-grey-lightest: #fafafa;
+	--ringside-ssm: "HCo Ringside Narrow SSm", "Arial", sans-serif;
+	--public-sans: "Public Sans", sans-serif;
+	--red-shadow: 0 3px 7px 0 rgba(60, 64, 67, 0.3), 0 3px 6px 2px rgba(60, 64, 67, 0.15);
+	--red-shadow-hover: 0 3px 7px 0 rgba(60, 64, 67, 0.4), 0 3px 6px 2px rgba(60, 64, 67, 0.25);
+	--red-shadow-inverted: 0 -3px 7px 0 rgba(60, 64, 67, 0.3), 0 3px 6px 2px rgba(60, 64, 67, 0.15);
+	--white-shadow: 3px 3px 8px 2px rgba(0, 0, 0, 0.2);
+	--white-shadow-hover: 3px 3px 8px 2px rgba(0, 0, 0, 0.3);
+	--uxd-border-radius: 6px;
+}
+
+html {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	margin: 0;
+}
+
+.uxd-button-link,
+.uxd-main .uxd-button-link {
+	align-self: center;
+	font-family: var(--ringside-ssm);
+	font-size: 16px;
+	font-weight: 400;
+	color: #fff;
+	text-align: center;
+	letter-spacing: 1.5px;
+	line-height: 1.5;
+	text-decoration: none;
+	background-color: var(--uxd-red);
+	padding: 0.75rem 2rem;
+	border: none;
+	border-radius: var(--uxd-border-radius);
+	box-shadow: var(--red-shadow);
+	margin: 1.5rem;
+	z-index: 1;
+}
+
+.uxd-button-link:hover,
+.uxd-main .uxd-button-link:hover {
+	cursor: pointer;
+	text-decoration: none;
+	background-color: var(--uxd-red-dark);
+	box-shadow: var(--red-shadow-hover);
+}
+
+.uxd-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--uxd-red);
+	box-shadow: var(--red-shadow);
+	z-index: 2;
+}
+
+.uxd-header__constraint {
+	width: 100%;
+	max-width: 1200px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.uxd-header__logo-link {
+	display: flex;
+}
+
+.uxd-header__logo {
+	height: 75px;
+	width: 150px;
+}
+
+.uxd-header__desktop-nav {
+	display: none;
+}
+
+.uxd-header__menu-icon {
+	height: 75px;
+	width: 28px;
+	margin-right: 1.5rem;
+}
+
+.uxd-header__search-form {
+	display: none;
+}
+
+@media (min-width: 1024px) {
+
+	.uxd-header {
+		box-shadow: var(--red-shadow);
+		position: sticky;
+		top: 0;
+	}
+
+	.uxd-header__desktop-nav {
+		height: 100%;
+		display: grid;
+		grid-auto-flow: column;
+		grid-auto-columns: max-content;
+		padding: 0 1rem;
+	}
+
+	.uxd-header__desktop-link {
+		height: 75px;
+		display: flex;
+		align-items: center;
+		font-family: var(--ringside-ssm);
+		color: #fff;
+		text-decoration: none;
+		padding: 0 1rem;
+		transition: background-color 0.25s;
+	}
+
+	.uxd-header__desktop-link:hover {
+		background-color: var(--uxd-red-dark);
+	}
+
+	.uxd-header__menu-icon {
+		display: none;
+	}
+
+	.uxd-header__search-form {
+		width: 100%;
+		display: flex;
+	}
+}
+
+.uxd-main {
+	width: calc(100% - 3rem);
+	max-width: calc(800px - 3rem);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 1.5rem 3rem;
+	margin: 0 auto;
+	flex: 1;
+	z-index: 1;
+}
+
+.uxd-footer {
+	display: flex;
+	justify-content: center;
+	background-color: var(--uxd-red);
+	box-shadow: var(--red-shadow-inverted);
+}
+
+.uxd-footer__constraint {
+	width: 100%;
+	max-width: 1200px;
+}
+
+.uxd-footer__logo {
+	width: 150px;
+}
+
+.uxd-footer__grid {
+	display: grid;
+	grid-row-gap: 2rem;
+	padding: 2rem 0;
+	margin: 0 1rem;
+}
+
+.uxd-footer__grid--borders {
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+
+.uxd-footer__grid-column {
+	display: grid;
+	grid-row-gap: 2rem;
+	justify-items: flex-start;
+	align-content: center;
+}
+
+.uxd-footer__text,
+.uxd-footer__link {
+	font-family: var(--ringside-ssm);
+	color: #fff;
+	text-decoration: none;
+	margin: 0;
+}
+
+.uxd-footer__link:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.uxd-footer__social-link {
+	height: 1.5rem;
+	margin-right: 1.5rem;
+}
+
+.uxd-footer__social-link:hover {
+	cursor: pointer;
+}
+
+@media (min-width: 640px) {
+
+	.uxd-footer__grid {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (min-width: 1024px) {
+
+	.uxd-footer__grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
