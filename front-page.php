@@ -6,9 +6,10 @@
  * @package byu-uxd-theme
  */
 
-$theme_directory        = get_template_directory_uri();
-$icons_directory        = "$theme_directory/icons";
-$social_icons_directory = "$icons_directory/social-media";
+$theme_directory             = get_template_directory_uri();
+$icons_directory             = "$theme_directory/icons";
+$social_icons_directory      = "$icons_directory/social-media";
+$leadership_images_directory = "$theme_directory/images/leadership";
 get_header();
 ?>
 <div class="uxd-hero">
@@ -26,5 +27,120 @@ get_header();
 	<img class="uxd-hero__background-icon uxd-hero__background-icon--laptop" src="<?php echo esc_url( sprintf( '%s/laptop-solid.svg', $icons_directory ) ); ?>">
 	<img class="uxd-hero__background-icon uxd-hero__background-icon--desktop" src="<?php echo esc_url( sprintf( '%s/desktop-solid.svg', $icons_directory ) ); ?>">
 </div>
+<div class="uxd-upcoming-events">
+	<h2 class="uxd-title">Upcoming Club Events</h2>
+	<hr class="uxd-title-border">
+	<p class="uxd-no-events-text">Stay tuned! Club events will be posted here soon.</p>
+</div>
+<main class="uxd-main">
+	<h2 class="uxd-title">What is UXD?</h2>
+	<hr class="uxd-title-border">
+	<p>User Experience Design (UXD) is the process of designing digital or physical products that are useful, easy to use, and delightful to interact with.</p>
+	<p>Read more <a href="#">here.</a></p>
+	<h2 class="uxd-title">Club Intro</h2>
+	<hr class="uxd-title-border">
+	<p>Our goal is to provide BYU students with:</p>
+	<div class="uxd-goals">
+		<p class="uxd-goal">
+			<img class="uxd-goal__icon" src="<?php echo esc_url( sprintf( '%s/star-solid.svg', $icons_directory ) ); ?>">
+			<strong class="uxd-goal__title">Opportunities</strong>to learn from professionals about industry practices and career paths
+		</p>
+		<p class="uxd-goal">
+			<img class="uxd-goal__icon" src="<?php echo esc_url( sprintf( '%s/list-solid.svg', $icons_directory ) ); ?>">
+			<strong>Resources</strong> to learn and practice new skills and build a portfolio
+		</p>
+		<p class="uxd-goal">
+			<img class="uxd-goal__icon" src="<?php echo esc_url( sprintf( '%s/handshake-regular.svg', $icons_directory ) ); ?>">
+			<strong>Networking</strong> to start bridging the gap between students and employers
+		</p>
+	</div>
+	<a class="uxd-button-link" href="#">Learn More</a>
+	<!-- <h2 class="uxd-title">How to Get Started</h2>
+	<hr class="uxd-title-border">
+	<ol>
+		<li>If you are new to the club and haven't officially signed up through <a href="#">BYU Clubs,</a> be sure to do that! It's quick, easy, and FREE.</li>
+		<li>Sign up for our for <a href=#">weekly newsletter</a> for info about club events, job and internship opportunities, and links to tutorials and other learning content!</li>
+		<li>Connect with us on these <a href="#">social media platforms</a> to receive by-the-minute updates about events and resources.</li>
+		<li>Come to our club meetings every Thursday at 6 PM (check the <a href="#">event schedule</a> for room locations).</li>
+		<li>Get your club t-shirt for only $10 by filling out <a href="#">this form.</a></li>
+	</ol>
+	<img style="margin-top: 2rem;" src="images/big_logo_tshirt-225x300.jpg"> -->
+	<h2 class="uxd-title">Club Leadership</h2>
+	<hr class="uxd-title-border">
+	<div class="uxd-leadership">
+		<div class="uxd-leadership__leader">
+			<picture class="uxd-leadership__picture">
+				<img class="uxd-leadership__image" src="<?php echo esc_url( sprintf( '%s/optimized/lily-stice.png', $leadership_images_directory ) ); ?>">
+			</picture>
+			<p class="uxd-leadership__name">Lily Stice</p>
+			<p class="uxd-leadership__title">President</p>
+		</div>
+		<div class="uxd-leadership__leader">
+			<picture class="uxd-leadership__picture">
+				<img class="uxd-leadership__image" src="<?php echo esc_url( sprintf( '%s/optimized/rachel-goddard.png', $leadership_images_directory ) ); ?>">
+			</picture>
+			<p class="uxd-leadership__name">Rachel Goddard</p>
+			<p class="uxd-leadership__title">Vice President</p>
+		</div>
+		<div class="uxd-leadership__leader">
+			<picture class="uxd-leadership__picture">
+				<img class="uxd-leadership__image" src="<?php echo esc_url( sprintf( '%s/optimized/derek-hansen.png', $leadership_images_directory ) ); ?>">
+			</picture>
+			<p class="uxd-leadership__name">Derek Hansen</p>
+			<p class="uxd-leadership__title">Faculty Advisor</p>
+		</div>
+		<div class="uxd-leadership__leader">
+			<picture class="uxd-leadership__picture">
+				<img class="uxd-leadership__image" src="<?php echo esc_url( sprintf( '%s/optimized/clarissa-crosby.jpg', $leadership_images_directory ) ); ?>">
+			</picture>
+			<p class="uxd-leadership__name">Clarissa Crosby</p>
+			<p class="uxd-leadership__title">Secretary</p>
+		</div>
+		<div class="uxd-leadership__leader">
+			<picture class="uxd-leadership__picture">
+				<img class="uxd-leadership__image" src="<?php echo esc_url( sprintf( '%s/optimized/keara-hutchinson.jpg', $leadership_images_directory ) ); ?>">
+			</picture>
+			<p class="uxd-leadership__name">Keara Hutchinson</p>
+			<p class="uxd-leadership__title">Treasurer</p>
+		</div>
+		<div class="uxd-leadership__leader">
+			<picture class="uxd-leadership__picture">
+				<img class="uxd-leadership__image" src="<?php echo esc_url( sprintf( '%s/optimized/caleb-young.jpg', $leadership_images_directory ) ); ?>">
+			</picture>
+			<p class="uxd-leadership__name">Caleb Young</p>
+			<p class="uxd-leadership__title">Marketing</p>
+		</div>
+		<div class="uxd-leadership__row-of-two">
+			<div class="uxd-leadership__leader">
+				<picture class="uxd-leadership__picture">
+					<img class="uxd-leadership__image" src="<?php echo esc_url( sprintf( '%s/optimized/emily-wixom.jpg', $leadership_images_directory ) ); ?>">
+				</picture>
+				<p class="uxd-leadership__name">Emily Wixom</p>
+				<p class="uxd-leadership__title">Graphic Design</p>
+			</div>
+			<div class="uxd-leadership__leader">
+				<picture class="uxd-leadership__picture">
+					<img class="uxd-leadership__image" src="<?php echo esc_url( sprintf( '%s/optimized/claire-manwaring.jpg', $leadership_images_directory ) ); ?>">
+				</picture>
+				<p class="uxd-leadership__name">Claire Manwaring</p>
+				<p class="uxd-leadership__title">Communications</p>
+			</div>
+		</div>
+	</div>
+	<!-- <h2 class="uxd-title">Have a Question?</h2>
+	<hr class="uxd-title-border">
+	<p>Fill out the form below and we'll send an email right back!</p>
+	<form class="uxd-contact-form">
+		<label class="uxd-contact-form__label">Your Name</label>
+		<input class="uxd-contact-form__text-input" type="text">
+		<label class="uxd-contact-form__label">Your Email</label>
+		<input class="uxd-contact-form__text-input" type="text">
+		<label class="uxd-contact-form__label">Subject</label>
+		<input class="uxd-contact-form__text-input" type="text">
+		<label class="uxd-contact-form__label">Message</label>
+		<textarea class="uxd-contact-form__textarea"></textarea>
+		<input class="uxd-button-link" type="submit" value="Send Email">
+	</form> -->
+</main>
 <?php
 get_footer();

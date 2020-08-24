@@ -1,3 +1,12 @@
+<?php
+/**
+ * The site header template
+ *
+ * @author Caleb Young <caleb.a.young@gmail.com>
+ * @package byu-uxd-theme
+ */
+
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 	<head>
@@ -5,7 +14,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="theme-color" content="#fa2617">
 		<title>BYU UXD Club</title>
-		<link rel="stylesheet" type="text/css" href="https://cdn.byu.edu/theme-fonts/1.x.x/ringside/fonts.css">
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>

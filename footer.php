@@ -5,6 +5,7 @@
  * @author Caleb Young <caleb.a.young@gmail.com>
  * @package byu-uxd-theme
  */
+
 ?>
 		<footer class="uxd-footer">
 			<div class="uxd-footer__constraint">

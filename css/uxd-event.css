@@ -1,0 +1,112 @@
+.uxd-upcoming-events {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #fff;
+	z-index: 1;
+}
+
+.uxd-no-events-text {
+	font-family: var(--public-sans);
+	text-align: center;
+	line-height: 2;
+}
+
+.uxd-upcoming-events .uxd-button-link {
+	margin-top: 3rem;
+}
+
+.uxd-event {
+	width: 100%;
+	max-width: 200px;
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	border-radius: var(--uxd-border-radius);
+	box-shadow: var(--white-shadow);
+	margin: 1.5rem 0;
+	cursor: pointer;
+	transition: box-shadow 0.2s;
+}
+
+.uxd-event:hover {
+	box-shadow: var(--white-shadow-hover);
+}
+
+.uxd-event__date {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	font-family: var(--ringside-ssm);
+	font-weight: 600;
+	color: #fff;
+	text-transform: uppercase;
+	background-color: var(--uxd-red);
+	padding: 1rem;
+	border-top-left-radius: var(--uxd-border-radius);
+	border-top-right-radius: var(--uxd-border-radius);
+}
+
+.uxd-event__month {
+	font-size: 20px;
+	margin: 0;
+}
+
+.uxd-event__day-number {
+	font-size: 80px;
+	margin: 0;
+}
+
+.uxd-event__day {
+	font-size: 16px;
+	margin: 0;
+}
+
+.uxd-event__info {
+	display: flex;
+	flex-direction: column;
+	padding: 1rem 2rem;
+}
+
+.uxd-event__title {
+	font-family: var(--ringside-ssm);
+	color: var(--uxd-red-dark);
+	margin: 0.5rem 0 0;
+}
+
+.uxd-event__text {
+	font-family: var(--ringside-ssm);
+	color: var(--byu-grey-dark);
+	margin: 0.75rem 0 0;
+}
+
+.uxd-event__time {
+	font-family: var(--ringside-ssm);
+	color: var(--byu-grey-dark);
+	margin: 0.75rem 0 0.5rem;
+}
+
+@media (min-width: 640px) {
+
+	.uxd-event {
+		max-width: 450px;
+		flex-direction: row;
+		direction: ltr;
+	}
+
+	.uxd-event__date {
+		min-width: 125px;
+		border-top-right-radius: unset;
+		border-bottom-left-radius: var(--uxd-border-radius);
+	}
+}
+
+@media (min-width: 1200px) {
+
+	.uxd-upcoming-events__wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 4rem;
+	}
+}
