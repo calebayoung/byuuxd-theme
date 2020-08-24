@@ -1,8 +1,8 @@
 <?php
 /**
- * The default page template
+ * Template Name: Under Construction
  *
- * @author Caleb Young <caleb.a.young@gmail.com>
+ * @author Caleb Young
  * @package byu-uxd-theme
  */
 

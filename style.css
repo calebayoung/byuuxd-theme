@@ -60,7 +60,6 @@ body {
 	padding: 0.75rem 2rem;
 	border: none;
 	border-radius: var(--uxd-border-radius);
-	box-shadow: var(--red-shadow);
 	margin: 1.5rem;
 	z-index: 1;
 }
@@ -70,7 +69,7 @@ body {
 	cursor: pointer;
 	text-decoration: none;
 	background-color: var(--uxd-red-dark);
-	box-shadow: var(--red-shadow-hover);
+	box-shadow: var(--red-shadow);
 }
 
 .uxd-header {
@@ -172,7 +171,6 @@ body {
 	font-size: 3.5rem;
 	color: var(--uxd-red);
 	text-align: center;
-	text-shadow: var(--red-text-shadow);
 	margin-top: 7rem;
 	z-index: 1;
 }
@@ -547,6 +545,10 @@ body {
 
 	.uxd-footer__grid {
 		grid-template-columns: 1fr 1fr;
+	}
+
+	.uxd-footer__grid-column--span-two {
+		grid-column: 1 / 3;
 	}
 }
 
