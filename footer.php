@@ -1,4 +1,11 @@
-		</main>
+<?php
+/**
+ * The site footer template
+ *
+ * @author Caleb Young <caleb.a.young@gmail.com>
+ * @package byu-uxd-theme
+ */
+?>
 		<footer class="uxd-footer">
 			<div class="uxd-footer__constraint">
 				<img class="uxd-footer__logo" src="<?php echo esc_url( sprintf( '%s/images/logo.png', get_template_directory_uri() ) ); ?>">

@@ -28,4 +28,3 @@
 				</form>
 			</div>
 		</header>
-		<main class="uxd-main">
