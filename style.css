@@ -138,6 +138,7 @@ body {
 		transition: background-color 0.25s;
 	}
 
+	.uxd-header__desktop-link--active,
 	.uxd-header__desktop-link:hover {
 		background-color: var(--uxd-red-dark);
 	}

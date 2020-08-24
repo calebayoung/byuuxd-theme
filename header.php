@@ -25,12 +25,12 @@ $template_directory_url = get_template_directory_uri();
 					<img class="uxd-header__logo" src="<?php echo esc_url( sprintf( '%s/images/logo.png', $template_directory_url ) ); ?>">
 				</a>
 				<nav class="uxd-header__desktop-nav">
-					<a class="uxd-header__desktop-link" href="<?php echo esc_url( sprintf( '%s/join', $home_url ) ); ?>">Join</a>
-					<a class="uxd-header__desktop-link" href="<?php echo esc_url( sprintf( '%s/club-events', $home_url ) ); ?>">Club Events</a>
-					<a class="uxd-header__desktop-link" href="<?php echo esc_url( sprintf( '%s/what-is-uxd', $home_url ) ); ?>">What is UXD?</a>
-					<a class="uxd-header__desktop-link" href="<?php echo esc_url( sprintf( '%s/resources', $home_url ) ); ?>">Resources</a>
-					<a class="uxd-header__desktop-link" href="<?php echo esc_url( sprintf( '%s/internships', $home_url ) ); ?>">Internships</a>
-					<a class="uxd-header__desktop-link" href="<?php echo esc_url( sprintf( '%s/contact-us', $home_url ) ); ?>">Contact Us</a>
+					<a class="uxd-header__desktop-link<?php echo esc_attr( is_active_header_link( 'join' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/join', $home_url ) ); ?>">Join</a>
+					<a class="uxd-header__desktop-link<?php echo esc_attr( is_active_header_link( 'club-events' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/club-events', $home_url ) ); ?>">Club Events</a>
+					<a class="uxd-header__desktop-link<?php echo esc_attr( is_active_header_link( 'what-is-uxd' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/what-is-uxd', $home_url ) ); ?>">What is UXD?</a>
+					<a class="uxd-header__desktop-link<?php echo esc_attr( is_active_header_link( 'resources' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/resources', $home_url ) ); ?>">Resources</a>
+					<a class="uxd-header__desktop-link<?php echo esc_attr( is_active_header_link( 'internships' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/internships', $home_url ) ); ?>">Internships</a>
+					<a class="uxd-header__desktop-link<?php echo esc_attr( is_active_header_link( 'contact-us' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/contact-us', $home_url ) ); ?>">Contact Us</a>
 				</nav>
 				<img class="uxd-header__menu-icon" src="<?php echo esc_url( sprintf( '%s/icons/bars-solid.svg', $template_directory_url ) ); ?>">
 				<form class="uxd-header__search-form">
@@ -38,3 +38,20 @@ $template_directory_url = get_template_directory_uri();
 				</form>
 			</div>
 		</header>
+<?php
+
+/**
+ * Returns an additional active class if the current page contains the provided slug.
+ *
+ * @param Slug $slug The page slug to check against.
+ * @author Caleb Young
+ * @package byu-uxd-theme
+ */
+function is_active_header_link( $slug ) {
+	global $wp;
+	$current_url = sprintf( '%s/', home_url( $wp->request ) );
+	if ( strpos( $current_url, $slug ) ) {
+		return ' uxd-header__desktop-link--active';
+	}
+	return '';
+}

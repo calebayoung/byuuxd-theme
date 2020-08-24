@@ -6,6 +6,7 @@
  * @package byu-uxd-theme
  */
 
+$home_url                    = get_home_url();
 $theme_directory             = get_template_directory_uri();
 $icons_directory             = "$theme_directory/icons";
 $social_icons_directory      = "$icons_directory/social-media";
@@ -54,7 +55,7 @@ get_header();
 			<strong>Networking</strong> to start bridging the gap between students and employers
 		</p>
 	</div>
-	<a class="uxd-button-link" href="#">Learn More</a>
+	<a class="uxd-button-link" href="<?php echo esc_url( sprintf( '%s/resources', $home_url ) ); ?>">Learn More</a>
 	<!-- <h2 class="uxd-title">How to Get Started</h2>
 	<hr class="uxd-title-border">
 	<ol>

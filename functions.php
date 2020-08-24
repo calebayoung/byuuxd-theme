@@ -18,5 +18,8 @@ function byu_uxd_enqueue_scripts() {
 	if ( is_front_page() ) {
 		wp_enqueue_style( 'uxd-event', "$theme_directory_url/css/uxd-event.css", array(), filemtime( "$theme_directory_path/css/uxd-event.css" ) );
 	}
+	if ( is_page_template( 'under-construction.php' ) ) {
+		wp_enqueue_style( 'under-construction', "$theme_directory_url/css/under-construction.css", array(), filemtime( "$theme_directory_path/css/under-construction.css" ) );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'byu_uxd_enqueue_scripts' );
