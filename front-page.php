@@ -37,7 +37,7 @@ get_header();
 	<h2 class="uxd-title">What is UXD?</h2>
 	<hr class="uxd-title-border">
 	<p>User Experience Design (UXD) is the process of designing digital or physical products that are useful, easy to use, and delightful to interact with.</p>
-	<p>Read more <a href="#">here.</a></p>
+	<p>Read more <a href="<?php echo esc_url( sprintf( '%s/what-is-uxd', $home_url ) ); ?>">here.</a></p>
 	<h2 class="uxd-title">Club Intro</h2>
 	<hr class="uxd-title-border">
 	<p>Our goal is to provide BYU students with:</p>
