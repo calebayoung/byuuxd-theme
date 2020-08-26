@@ -60,7 +60,7 @@ function is_active_header_link( $slug ) {
 	global $wp;
 	$current_url = sprintf( '%s/', home_url( $wp->request ) );
 	if ( strpos( $current_url, $slug ) ) {
-		return ' uxd-header__desktop-link--active';
+		return ' uxd-header__nav-link--active';
 	}
 	return '';
 }

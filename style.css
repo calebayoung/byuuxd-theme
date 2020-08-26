@@ -123,6 +123,11 @@ body {
 	transition: background-color 0.25s;
 }
 
+.uxd-header__nav-link--active,
+.uxd-header__desktop-link:hover {
+	background-color: var(--uxd-red-dark);
+}
+
 .uxd-header__desktop-nav {
 	display: none;
 }
@@ -145,6 +150,11 @@ body {
 		top: 0;
 	}
 
+	.uxd-header__mobile-nav {
+		display: none;
+		visibility: none;
+	}
+
 	.uxd-header__desktop-nav {
 		height: 100%;
 		display: grid;
@@ -162,11 +172,6 @@ body {
 		text-decoration: none;
 		padding: 0 1rem;
 		transition: background-color 0.25s;
-	}
-
-	.uxd-header__desktop-link--active,
-	.uxd-header__desktop-link:hover {
-		background-color: var(--uxd-red-dark);
 	}
 
 	.uxd-header__menu-icon {
@@ -588,6 +593,7 @@ body {
 
 .uxd-page {
 	align-items: flex-start;
+	font-family: var(--public-sans);
 }
 
 .uxd-page h1,
