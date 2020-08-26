@@ -585,3 +585,36 @@ body {
 		grid-template-columns: repeat(3, 1fr);
 	}
 }
+
+.uxd-page {
+	align-items: flex-start;
+}
+
+.uxd-page h1,
+.uxd-page h2,
+.uxd-page h3 {
+	font-family: var(--ringside-ssm);
+	color: #2a2b2a;
+}
+
+.uxd-page h1 {
+	align-self: center;
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin: 3rem 1.5rem;
+}
+
+.uxd-page h2 {
+	font-size: 1.75rem;
+	padding-bottom: 0.25rem;
+	border-bottom: 1px solid var(--uxd-red);
+}
+
+.uxd-page h3 {
+	font-size: 1.5rem;
+}
+
+.uxd-page p {
+	text-align: left;
+}
