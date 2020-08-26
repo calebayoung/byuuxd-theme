@@ -32,10 +32,19 @@ $template_directory_url = get_template_directory_uri();
 					<a class="uxd-header__desktop-link<?php echo esc_attr( is_active_header_link( 'internships' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/internships', $home_url ) ); ?>">Internships</a>
 					<a class="uxd-header__desktop-link<?php echo esc_attr( is_active_header_link( 'contact-us' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/contact-us', $home_url ) ); ?>">Contact Us</a>
 				</nav>
-				<img class="uxd-header__menu-icon" src="<?php echo esc_url( sprintf( '%s/icons/bars-solid.svg', $template_directory_url ) ); ?>">
+				<img class="uxd-header__menu-icon uxd-header__menu-icon--open" src="<?php echo esc_url( sprintf( '%s/icons/bars-solid.svg', $template_directory_url ) ); ?>">
+				<img class="uxd-header__menu-icon uxd-header__menu-icon--close hidden" src="<?php echo esc_url( sprintf( '%s/icons/times-solid.svg', $template_directory_url ) ); ?>">
 				<form class="uxd-header__search-form">
 					<!-- TODO: create desktop and mobile search form -->
 				</form>
+			</div>
+			<div class="uxd-header__mobile-nav">
+				<a class="uxd-header__mobile-link<?php echo esc_attr( is_active_header_link( 'join' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/join', $home_url ) ); ?>">Join</a>
+				<a class="uxd-header__mobile-link<?php echo esc_attr( is_active_header_link( 'club-events' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/club-events', $home_url ) ); ?>">Club Events</a>
+				<a class="uxd-header__mobile-link<?php echo esc_attr( is_active_header_link( 'what-is-uxd' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/what-is-uxd', $home_url ) ); ?>">What is UXD?</a>
+				<a class="uxd-header__mobile-link<?php echo esc_attr( is_active_header_link( 'resources' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/resources', $home_url ) ); ?>">Resources</a>
+				<a class="uxd-header__mobile-link<?php echo esc_attr( is_active_header_link( 'internships' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/internships', $home_url ) ); ?>">Internships</a>
+				<a class="uxd-header__mobile-link<?php echo esc_attr( is_active_header_link( 'contact-us' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/contact-us', $home_url ) ); ?>">Contact Us</a>
 			</div>
 		</header>
 <?php

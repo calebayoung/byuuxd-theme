@@ -21,5 +21,7 @@ function byu_uxd_enqueue_scripts() {
 	if ( is_page_template( 'under-construction.php' ) ) {
 		wp_enqueue_style( 'under-construction', "$theme_directory_url/css/under-construction.css", array(), filemtime( "$theme_directory_path/css/under-construction.css" ) );
 	}
+	// JS Enqueues.
+	wp_enqueue_script( 'byu-uxd-functions', "$theme_directory_url/js/functions.js", array( 'jquery' ), filemtime( "$theme_directory_path/js/functions.js" ), false, true );
 }
 add_action( 'wp_enqueue_scripts', 'byu_uxd_enqueue_scripts' );

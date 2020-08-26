@@ -10,6 +10,7 @@
 	font-family: var(--public-sans);
 	text-align: center;
 	line-height: 2;
+	padding: 0 1.5rem;
 }
 
 .uxd-upcoming-events .uxd-button-link {
