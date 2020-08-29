@@ -74,6 +74,7 @@
 	font-family: var(--ringside-ssm);
 	color: var(--uxd-red-dark);
 	margin: 0.5rem 0 0;
+	word-wrap: break-word;
 }
 
 .uxd-event__text {

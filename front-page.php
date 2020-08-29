@@ -31,13 +31,63 @@ get_header();
 <div class="uxd-upcoming-events">
 	<h2 class="uxd-title">Upcoming Club Events</h2>
 	<hr class="uxd-title-border">
-	<p class="uxd-no-events-text">Stay tuned! Club events will be posted here soon.</p>
+	<div class="uxd-upcoming-events__wrapper">
+		<div class="uxd-event">
+			<div class="uxd-event__date">
+				<p class="uxd-event__month">September</p>
+				<p class="uxd-event__day-number">9</p>
+				<p class="uxd-event__day">Wednesday</p>
+			</div>
+			<div class="uxd-event__info">
+				<h2 class="uxd-event__title">Welcome - Workshop Day</h2>
+				<p class="uxd-event__text">Club Officers</p>
+				<p class="uxd-event__time">7:00pm</p>
+			</div>
+		</div>
+		<div class="uxd-event">
+			<div class="uxd-event__date">
+				<p class="uxd-event__month">September</p>
+				<p class="uxd-event__day-number">16</p>
+				<p class="uxd-event__day">Wednesday</p>
+			</div>
+			<div class="uxd-event__info">
+				<h2 class="uxd-event__title">Speaker Day</h2>
+				<p class="uxd-event__text">TBA</p>
+				<p class="uxd-event__time">7:00pm</p>
+			</div>
+		</div>
+		<div class="uxd-event">
+			<div class="uxd-event__date">
+				<p class="uxd-event__month">September</p>
+				<p class="uxd-event__day-number">23</p>
+				<p class="uxd-event__day">Wednesday</p>
+			</div>
+			<div class="uxd-event__info">
+				<h2 class="uxd-event__title">Learn Adobe XD</h2>
+				<p class="uxd-event__text">Club Officers</p>
+				<p class="uxd-event__time">7:00pm</p>
+			</div>
+		</div>
+		<div class="uxd-event">
+			<div class="uxd-event__date">
+				<p class="uxd-event__month">September</p>
+				<p class="uxd-event__day-number">30</p>
+				<p class="uxd-event__day">Wednesday</p>
+			</div>
+			<div class="uxd-event__info">
+				<h2 class="uxd-event__title">Personas/Empathy Maps</h2>
+				<p class="uxd-event__text">Club Officers</p>
+				<p class="uxd-event__time">7:00pm</p>
+			</div>
+		</div>
+	</div>
+	<!-- <p class="uxd-no-events-text">Stay tuned! Club events will be posted here soon.</p> -->
 </div>
 <main class="uxd-main">
 	<h2 class="uxd-title">What is UXD?</h2>
 	<hr class="uxd-title-border">
 	<p>User Experience Design (UXD) is the process of designing digital or physical products that are useful, easy to use, and delightful to interact with.</p>
-	<p>Read more <a href="<?php echo esc_url( sprintf( '%s/what-is-uxd', $home_url ) ); ?>">here.</a></p>
+	<a class="uxd-button-link" href="<?php echo esc_url( sprintf( '%s/what-is-uxd', $home_url ) ); ?>">Learn More</a>
 	<h2 class="uxd-title">Club Intro</h2>
 	<hr class="uxd-title-border">
 	<p>Our goal is to provide BYU students with:</p>
