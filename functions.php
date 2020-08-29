@@ -25,3 +25,66 @@ function byu_uxd_enqueue_scripts() {
 	wp_enqueue_script( 'byu-uxd-functions', "$theme_directory_url/js/functions.js", array( 'jquery' ), filemtime( "$theme_directory_path/js/functions.js" ), false, true );
 }
 add_action( 'wp_enqueue_scripts', 'byu_uxd_enqueue_scripts' );
+
+/**
+ * Register the Event custom post type
+ */
+function byu_uxd_register_event_cpt() {
+	$single_uppercase = 'Event';
+	$plural_uppercase = 'Events';
+	$plural_lowercase = 'events';
+
+	$labels = array(
+		'add_new_item'       => "Add New $single_uppercase",
+		'new_item'           => "New $single_uppercase",
+		'edit_item'          => "Edit $single_uppercase",
+		'view_item'          => "View $single_uppercase",
+		'all_items'          => "All $plural_uppercase",
+		'search_items'       => "Search $plural_uppercase",
+		'parent_item_colon'  => "Parent $plural_uppercase:",
+		'not_found'          => "No $plural_lowercase found.",
+		'not_found_in_trash' => "No $plural_lowercase found in Trash.",
+	);
+
+	$args = array(
+		'label'         => $plural_uppercase,
+		'labels'        => $labels,
+		'public'        => true,
+		'menu_position' => 5,
+		'menu_icon'     => 'dashicons-calendar-alt',
+		'hierarchical'  => false,
+		'supports'      => array( 'title', 'editor', 'revisions' ),
+		'taxonomies'    => array(),
+		'has_archive'   => true,
+		'rewrite'       => array( 'slug' => 'talks' ),
+		'show_in_rest'  => true,
+	);
+	register_post_type( 'event', $args );
+}
+add_action( 'init', 'byu_uxd_register_event_cpt' );
+
+/**
+ * Specify custom order of dashboard links on the left
+ */
+function byu_uxd_custom_dashboard_order() {
+	return array(
+		'index.php',
+		'edit.php?post_type=page',
+		'edit.php?post_type=event',
+		'upload.php',
+		'edit-comments.php',
+		'edit.php',
+		'separator1',
+		'theme_settings',
+		'themes.php',
+		'plugins.php',
+		'users.php',
+		'options-general.php',
+		'tools.php',
+		'separator2',
+		'edit.php?post_type=acf-field-group',
+		'separator-last',
+	);
+}
+add_filter( 'custom_menu_order', '__return_true' );
+add_filter( 'menu_order', 'byu_uxd_custom_dashboard_order' );

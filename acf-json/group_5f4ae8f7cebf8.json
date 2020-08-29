@@ -1,0 +1,79 @@
+{
+    "key": "group_5f4ae8f7cebf8",
+    "title": "Event Custom Fields",
+    "fields": [
+        {
+            "key": "field_5f4ae90fc8eeb",
+            "label": "Date & Time",
+            "name": "date_time",
+            "type": "date_time_picker",
+            "instructions": "Specify the date and time of the club event",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y g:i a",
+            "return_format": "F j, Y g:i a",
+            "first_day": 0
+        },
+        {
+            "key": "field_5f4aead8731a5",
+            "label": "Event Host",
+            "name": "event_host",
+            "type": "text",
+            "instructions": "This is usually the speaker who is presenting, or \"Club Officers\"",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Club Officers",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5f4aeb0f5fc4b",
+            "label": "Location",
+            "name": "location",
+            "type": "text",
+            "instructions": "Short description of where the club event will be held (e.g. WSC 3250)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "event"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1598745396
+}
