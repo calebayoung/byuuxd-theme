@@ -15,7 +15,7 @@ function byu_uxd_enqueue_scripts() {
 	// CSS Enqueues.
 	wp_enqueue_style( 'byu-uxd-style', "$theme_directory_url/style.css", array(), filemtime( "$theme_directory_path/style.css" ) );
 	wp_enqueue_style( 'ringside', 'https://cdn.byu.edu/theme-fonts/1.x.x/ringside/fonts.css', array(), '1' );
-	if ( is_front_page() ) {
+	if ( is_front_page() || is_post_type_archive( 'event' ) ) {
 		wp_enqueue_style( 'uxd-event', "$theme_directory_url/css/uxd-event.css", array(), filemtime( "$theme_directory_path/css/uxd-event.css" ) );
 	}
 	if ( is_page_template( 'under-construction.php' ) ) {
@@ -56,12 +56,27 @@ function byu_uxd_register_event_cpt() {
 		'supports'      => array( 'title', 'editor', 'revisions' ),
 		'taxonomies'    => array(),
 		'has_archive'   => true,
-		'rewrite'       => array( 'slug' => 'talks' ),
+		'rewrite'       => array( 'slug' => 'club-events' ),
 		'show_in_rest'  => true,
 	);
 	register_post_type( 'event', $args );
 }
 add_action( 'init', 'byu_uxd_register_event_cpt' );
+
+/**
+ * Always order events by the specified event date
+ *
+ * @param array $query The query being run.
+ */
+function order_events_by_date( $query ) {
+	if ( isset( $query->query_vars['post_type'] ) && 'event' === $query->query_vars['post_type'] ) {
+		$query->set( 'orderby', 'meta_value' );
+		$query->set( 'meta_key', 'date_time' );
+		$query->set( 'order', 'ASC' );
+	}
+	return $query;
+}
+add_filter( 'pre_get_posts', 'order_events_by_date' );
 
 /**
  * Specify custom order of dashboard links on the left

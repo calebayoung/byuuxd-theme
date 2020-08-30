@@ -11,6 +11,11 @@ $theme_directory             = get_template_directory_uri();
 $icons_directory             = "$theme_directory/icons";
 $social_icons_directory      = "$icons_directory/social-media";
 $leadership_images_directory = "$theme_directory/images/leadership";
+$events_query_args           = array(
+	'post_type'   => 'event',
+	'post_status' => 'publish',
+);
+$events_query                = new WP_Query( $events_query_args );
 get_header();
 ?>
 <div class="uxd-hero">
@@ -32,56 +37,39 @@ get_header();
 	<h2 class="uxd-title">Upcoming Club Events</h2>
 	<hr class="uxd-title-border">
 	<div class="uxd-upcoming-events__wrapper">
-		<div class="uxd-event">
-			<div class="uxd-event__date">
-				<p class="uxd-event__month">September</p>
-				<p class="uxd-event__day-number">9</p>
-				<p class="uxd-event__day">Wednesday</p>
-			</div>
-			<div class="uxd-event__info">
-				<h2 class="uxd-event__title">Welcome - Workshop Day</h2>
-				<p class="uxd-event__text">Club Officers</p>
-				<p class="uxd-event__time">7:00pm</p>
-			</div>
+	<?php
+	$events_counter = 0;
+	$current_time   = strtotime( 'today' );
+	foreach ( $events_query->posts as $event ) {
+		$event_time = strtotime( get_field( 'date_time', $event->ID ) );
+		if ( $events_counter < 4 && $current_time < $event_time ) {
+			$events_counter++;
+			$event_args = array(
+				'event_title'    => $event->post_title,
+				'event_link'     => get_permalink( $event->ID ),
+				'event_month'    => gmdate( 'F', $event_time ),
+				'event_day'      => gmdate( 'j', $event_time ),
+				'event_weekday'  => gmdate( 'l', $event_time ),
+				'event_host'     => get_field( 'event_host', $event->ID ),
+				'event_time'     => gmdate( 'g:ia', $event_time ),
+				'event_location' => get_field( 'location', $event->ID ),
+			);
+			get_template_part( 'template-parts/uxd-event', null, $event_args );
+		}
+	}
+	if ( 0 === $events_counter ) {
+		?>
+		<p class="uxd-no-events-text">Stay tuned! Club events will be posted here soon.</p>
+		<?php
+	} else {
+		?>
+		<div class="uxd-all-events-wrapper">
+			<a class="uxd-button-link" href="<?php echo esc_url( sprintf( '%s/club-events', $home_url ) ); ?>">See All Events</a>
 		</div>
-		<div class="uxd-event">
-			<div class="uxd-event__date">
-				<p class="uxd-event__month">September</p>
-				<p class="uxd-event__day-number">16</p>
-				<p class="uxd-event__day">Wednesday</p>
-			</div>
-			<div class="uxd-event__info">
-				<h2 class="uxd-event__title">Speaker Day</h2>
-				<p class="uxd-event__text">TBA</p>
-				<p class="uxd-event__time">7:00pm</p>
-			</div>
-		</div>
-		<div class="uxd-event">
-			<div class="uxd-event__date">
-				<p class="uxd-event__month">September</p>
-				<p class="uxd-event__day-number">23</p>
-				<p class="uxd-event__day">Wednesday</p>
-			</div>
-			<div class="uxd-event__info">
-				<h2 class="uxd-event__title">Learn Adobe XD</h2>
-				<p class="uxd-event__text">Club Officers</p>
-				<p class="uxd-event__time">7:00pm</p>
-			</div>
-		</div>
-		<div class="uxd-event">
-			<div class="uxd-event__date">
-				<p class="uxd-event__month">September</p>
-				<p class="uxd-event__day-number">30</p>
-				<p class="uxd-event__day">Wednesday</p>
-			</div>
-			<div class="uxd-event__info">
-				<h2 class="uxd-event__title">Personas/Empathy Maps</h2>
-				<p class="uxd-event__text">Club Officers</p>
-				<p class="uxd-event__time">7:00pm</p>
-			</div>
-		</div>
+		<?php
+	}
+	?>
 	</div>
-	<!-- <p class="uxd-no-events-text">Stay tuned! Club events will be posted here soon.</p> -->
 </div>
 <main class="uxd-main">
 	<h2 class="uxd-title">What is UXD?</h2>

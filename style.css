@@ -2,6 +2,8 @@
  * Theme Name: BYU UXD Website Theme
  * Theme URI: https://github.com/calebayoung/byuuxd-theme
  * Description: WordPress theme for the BYU UXD Club website.
+ * Version: 1.0
+ * Requires at least: 5.5
  * Author: Caleb Young
  * Author URI: http://calebayoung.com/
  */
@@ -349,7 +351,8 @@ body {
 	margin: 6rem 0 0;
 }
 
-.uxd-title-border {
+.uxd-title-border,
+.uxd-main .uxd-title-border {
 	width: 8rem;
 	border: none;
 	border-bottom: 1px solid var(--uxd-red);
@@ -381,6 +384,12 @@ body {
 .uxd-main a:hover {
 	cursor: pointer;
 	text-decoration: underline;
+}
+
+.uxd-main hr {
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid var(--uxd-red);
 }
 
 .uxd-goals {
@@ -608,6 +617,7 @@ body {
 .uxd-page h1 {
 	align-self: center;
 	font-size: 2rem;
+	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	margin: 3rem 1.5rem;
