@@ -81,6 +81,18 @@ body {
 	box-shadow: var(--red-shadow);
 }
 
+.uxd-event-flyer {
+	width: 100%;
+	max-width: 800px;
+	border-radius: var(--uxd-border-radius);
+	box-shadow: var(--white-shadow);
+	margin: 2rem 0 1rem;
+}
+
+.uxd-single-event .uxd-event-flyer {
+	margin-bottom: 2rem;
+}
+
 .uxd-header {
 	display: flex;
 	flex-direction: column;
@@ -379,11 +391,16 @@ body {
 .uxd-main a {
 	color: var(--uxd-red);
 	text-decoration: none;
+	overflow-wrap: anywhere;
 }
 
 .uxd-main a:hover {
 	cursor: pointer;
 	text-decoration: underline;
+}
+
+.uxd-main img {
+	height: auto;
 }
 
 .uxd-main hr {
@@ -408,7 +425,7 @@ body {
 }
 
 .uxd-goal__icon {
-	height: 3rem;
+	width: 3rem;
 }
 
 .uxd-goal strong {

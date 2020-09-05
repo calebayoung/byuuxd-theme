@@ -33,6 +33,24 @@ get_header();
 	<img class="uxd-hero__background-icon uxd-hero__background-icon--laptop" src="<?php echo esc_url( sprintf( '%s/laptop-solid.svg', $icons_directory ) ); ?>">
 	<img class="uxd-hero__background-icon uxd-hero__background-icon--desktop" src="<?php echo esc_url( sprintf( '%s/desktop-solid.svg', $icons_directory ) ); ?>">
 </div>
+<?php
+$events_counter = 0;
+$current_time   = strtotime( 'today' );
+foreach ( $events_query->posts as $event ) {
+	$event_time = strtotime( get_field( 'date_time', $event->ID ) );
+	if ( $events_counter < 1 && $current_time < $event_time ) {
+		$events_counter++;
+		$event_flyer = get_field( 'flyer', $event->ID );
+		?>
+		<main class="uxd-main" style="padding-bottom: 0;">
+			<h2 class="uxd-title">Next Event</h2>
+			<hr class="uxd-title-border">
+			<a href="<?php echo esc_url( get_permalink( $event->ID ) ); ?>"><img class="uxd-event-flyer" src="<?php echo esc_url( $event_flyer ); ?>"></a>
+		</main>
+		<?php
+	}
+}
+?>
 <div class="uxd-upcoming-events">
 	<h2 class="uxd-title">Upcoming Club Events</h2>
 	<hr class="uxd-title-border">
