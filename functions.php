@@ -56,7 +56,7 @@ function byu_uxd_register_event_cpt() {
 		'supports'      => array( 'title', 'editor', 'revisions' ),
 		'taxonomies'    => array(),
 		'has_archive'   => true,
-		'rewrite'       => array( 'slug' => 'club-events' ),
+		'rewrite'       => array( 'slug' => 'events' ),
 		'show_in_rest'  => true,
 	);
 	register_post_type( 'event', $args );
@@ -73,10 +73,39 @@ function order_events_by_date( $query ) {
 		$query->set( 'orderby', 'meta_value' );
 		$query->set( 'meta_key', 'date_time' );
 		$query->set( 'order', 'ASC' );
+		$query->set( 'nopaging', 1 );
 	}
 	return $query;
 }
 add_filter( 'pre_get_posts', 'order_events_by_date' );
+
+/**
+ * Add the event-date column in the back-end archive
+ *
+ * @param array $columns The existing columns to be displayed.
+ */
+function byu_uxd_event_add_date_column( $columns ) {
+	$columns = array(
+		'cb'         => $columns['cb'],
+		'title'      => __( 'Title' ),
+		'event-date' => __( 'Event Date' ),
+	);
+	return $columns;
+}
+add_filter( 'manage_event_posts_columns', 'byu_uxd_event_add_date_column' );
+
+/**
+ * Populate the event-date column in the back-end archive
+ *
+ * @param array $column The current column being rendered.
+ * @param int   $post_id The current post being rendered.
+ */
+function byu_uxd_event_date_column( $column, $post_id ) {
+	if ( 'event-date' === $column ) {
+		echo esc_html( get_field( 'date_time', $post_id ) );
+	}
+}
+add_filter( 'manage_event_posts_custom_column', 'byu_uxd_event_date_column', 10, 2 );
 
 /**
  * Specify custom order of dashboard links on the left

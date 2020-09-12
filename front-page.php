@@ -19,8 +19,8 @@ $events_query                = new WP_Query( $events_query_args );
 get_header();
 ?>
 <div class="uxd-hero">
-	<h1 class="uxd-hero__header">BYU User Experience Design Club</h1>
-	<a class="uxd-button-link" href="https://clubs.byu.edu/clubs#/byuxd" target="_blank">Join Club</a>
+	<h1 class="uxd-hero__header">BYU User Experience Design Association</h1>
+	<a class="uxd-button-link" href="https://clubs.byu.edu/clubs#/byuxd" target="_blank">Join Through BYUSA</a>
 	<a class="uxd-button-link" href="https://byu.us10.list-manage.com/subscribe?u=c7b89a067a3b921928fdfe62f&id=0f1edc5f72" target="_blank">Subscribe to Newsletter</a>
 	<div class="uxd-hero__social-icons">
 		<a href="https://www.facebook.com/BYUUXD/" target="_blank"><img class="uxd-hero__social-icon" src="<?php echo esc_url( sprintf( '%s/facebook-brands-red.svg', $social_icons_directory ) ); ?>"></a>
@@ -35,24 +35,26 @@ get_header();
 </div>
 <?php
 $events_counter = 0;
-$current_time   = strtotime( 'today' );
+$current_time   = strtotime( '-1 day' ); // We set current_time to yesterday so there's one day of overlap to display the upcoming event.
 foreach ( $events_query->posts as $event ) {
 	$event_time = strtotime( get_field( 'date_time', $event->ID ) );
 	if ( $events_counter < 1 && $current_time < $event_time ) {
 		$events_counter++;
 		$event_flyer = get_field( 'flyer', $event->ID );
-		?>
-		<main class="uxd-main" style="padding-bottom: 0;">
-			<h2 class="uxd-title">Next Event</h2>
-			<hr class="uxd-title-border">
-			<a href="<?php echo esc_url( get_permalink( $event->ID ) ); ?>"><img class="uxd-event-flyer" src="<?php echo esc_url( $event_flyer ); ?>"></a>
-		</main>
-		<?php
+		if ( ! empty( $event_flyer ) ) {
+			?>
+			<main class="uxd-main" style="padding-bottom: 0;">
+				<h2 class="uxd-title">Next Event</h2>
+				<hr class="uxd-title-border">
+				<a href="<?php echo esc_url( get_permalink( $event->ID ) ); ?>"><img class="uxd-event-flyer" src="<?php echo esc_url( $event_flyer ); ?>"></a>
+			</main>
+			<?php
+		}
 	}
 }
 ?>
 <div class="uxd-upcoming-events">
-	<h2 class="uxd-title">Upcoming Club Events</h2>
+	<h2 class="uxd-title">Upcoming Events</h2>
 	<hr class="uxd-title-border">
 	<div class="uxd-upcoming-events__wrapper">
 	<?php
@@ -77,12 +79,12 @@ foreach ( $events_query->posts as $event ) {
 	}
 	if ( 0 === $events_counter ) {
 		?>
-		<p class="uxd-no-events-text">Stay tuned! Club events will be posted here soon.</p>
+		<p class="uxd-no-events-text">Stay tuned! Events will be posted here soon.</p>
 		<?php
 	} else {
 		?>
 		<div class="uxd-all-events-wrapper">
-			<a class="uxd-button-link" href="<?php echo esc_url( sprintf( '%s/club-events', $home_url ) ); ?>">See All Events</a>
+			<a class="uxd-button-link" href="<?php echo esc_url( sprintf( '%s/events', $home_url ) ); ?>">See All Events</a>
 		</div>
 		<?php
 	}
@@ -94,7 +96,7 @@ foreach ( $events_query->posts as $event ) {
 	<hr class="uxd-title-border">
 	<p>User Experience Design (UXD) is the process of designing digital or physical products that are useful, easy to use, and delightful to interact with.</p>
 	<a class="uxd-button-link" href="<?php echo esc_url( sprintf( '%s/what-is-uxd', $home_url ) ); ?>">Learn More</a>
-	<h2 class="uxd-title">Club Intro</h2>
+	<h2 class="uxd-title">Association Intro</h2>
 	<hr class="uxd-title-border">
 	<p>Our goal is to provide BYU students with:</p>
 	<div class="uxd-goals">
@@ -122,7 +124,7 @@ foreach ( $events_query->posts as $event ) {
 		<li>Get your club t-shirt for only $10 by filling out <a href="#">this form.</a></li>
 	</ol>
 	<img style="margin-top: 2rem;" src="images/big_logo_tshirt-225x300.jpg"> -->
-	<h2 class="uxd-title">Club Leadership</h2>
+	<h2 class="uxd-title">Association Leadership</h2>
 	<hr class="uxd-title-border">
 	<div class="uxd-leadership">
 		<div class="uxd-leadership__leader">

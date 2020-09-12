@@ -14,7 +14,7 @@ $home_url = get_home_url();
 				<div class="uxd-footer__grid uxd-footer__grid--borders">
 					<div class="uxd-footer__grid-column">
 						<a class="uxd-footer__link" href="<?php echo esc_url( sprintf( '%s/join', $home_url ) ); ?>">Join</a>
-						<a class="uxd-footer__link" href="<?php echo esc_url( sprintf( '%s/club-events', $home_url ) ); ?>">Club Events</a>
+						<a class="uxd-footer__link" href="<?php echo esc_url( sprintf( '%s/events', $home_url ) ); ?>">Events</a>
 						<a class="uxd-footer__link" href="<?php echo esc_url( sprintf( '%s/what-is-uxd', $home_url ) ); ?>">What is UXD?</a>
 					</div>
 					<div class="uxd-footer__grid-column">

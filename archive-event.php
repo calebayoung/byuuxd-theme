@@ -9,7 +9,7 @@
 get_header();
 ?>
 <main class="uxd-page uxd-main">
-	<h1>Club Events</h1>
+	<h1>Events</h1>
 </main>
 <div class="uxd-events-archive">
 	<?php
