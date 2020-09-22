@@ -25,6 +25,7 @@ get_header();
 	<div class="uxd-hero__social-icons">
 		<a href="https://www.facebook.com/BYUUXD/" target="_blank"><img class="uxd-hero__social-icon" src="<?php echo esc_url( sprintf( '%s/facebook-brands-red.svg', $social_icons_directory ) ); ?>"></a>
 		<a href="https://byuuxdclub.slack.com/" target="_blank"><img class="uxd-hero__social-icon" src="<?php echo esc_url( sprintf( '%s/slack-brands-red.svg', $social_icons_directory ) ); ?>"></a>
+		<a href="https://www.linkedin.com/company/byu-uxd-association/" target="_blank"><img class="uxd-hero__social-icon" src="<?php echo esc_url( sprintf( '%s/linkedin-brands-red.svg', $social_icons_directory ) ); ?>"></a>
 		<!-- <img class="uxd-hero__social-icon" src="<?php echo esc_url( sprintf( '%s/twitter-brands-red.svg', $social_icons_directory ) ); ?>"> -->
 		<!-- <img class="uxd-hero__social-icon" src="<?php echo esc_url( sprintf( '%s/instagram-brands-red.svg', $social_icons_directory ) ); ?>"> -->
 		<a href="mailto:byu.uxd@gmail.com" target="_blank"><img class="uxd-hero__social-icon" src="<?php echo esc_url( sprintf( '%s/envelope-solid-red.svg', $social_icons_directory ) ); ?>"></a>
@@ -33,6 +34,12 @@ get_header();
 	<img class="uxd-hero__background-icon uxd-hero__background-icon--laptop" src="<?php echo esc_url( sprintf( '%s/laptop-solid.svg', $icons_directory ) ); ?>">
 	<img class="uxd-hero__background-icon uxd-hero__background-icon--desktop" src="<?php echo esc_url( sprintf( '%s/desktop-solid.svg', $icons_directory ) ); ?>">
 </div>
+<main class="uxd-main" style="padding-bottom: 0;">
+	<h2 class="uxd-title">Zoom Meeting Link</h2>
+	<hr class="uxd-title-border">
+	<p><a href="https://byu.zoom.us/j/92805468405?pwd=bzVNaHlOQllqTEp3a3FUbzdmUXZ5UT09" target="_blank">Click here</a> to join the club Zoom meeting.</p>
+	<p>Association meetings are each Wednesday at 7pm (Mountain Time).</p>
+</main>
 <?php
 $events_counter = 0;
 $current_time   = strtotime( '-1 day' ); // We set current_time to yesterday so there's one day of overlap to display the upcoming event.
@@ -59,7 +66,6 @@ foreach ( $events_query->posts as $event ) {
 	<div class="uxd-upcoming-events__wrapper">
 	<?php
 	$events_counter = 0;
-	$current_time   = strtotime( 'today' );
 	foreach ( $events_query->posts as $event ) {
 		$event_time = strtotime( get_field( 'date_time', $event->ID ) );
 		if ( $events_counter < 4 && $current_time < $event_time ) {

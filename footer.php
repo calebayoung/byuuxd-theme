@@ -26,6 +26,7 @@ $home_url = get_home_url();
 						<div class="uxd-footer__social-icons">
 							<a href="https://www.facebook.com/BYUUXD/" target="_blank"><img class="uxd-footer__social-link" src="<?php echo esc_url( sprintf( '%s/icons/social-media/facebook-brands-white.svg', get_template_directory_uri() ) ); ?>"></a>
 							<a href="https://byuuxdclub.slack.com/" target="_blank"><img class="uxd-footer__social-link" src="<?php echo esc_url( sprintf( '%s/icons/social-media/slack-brands-white.svg', get_template_directory_uri() ) ); ?>"></a>
+							<a href="https://www.linkedin.com/company/byu-uxd-association/" target="_blank"><img class="uxd-footer__social-link" src="<?php echo esc_url( sprintf( '%s/icons/social-media/linkedin-brands-white.svg', get_template_directory_uri() ) ); ?>"></a>
 							<!-- <img class="uxd-footer__social-link" src="<?php echo esc_url( sprintf( '%s/icons/social-media/twitter-brands-white.svg', get_template_directory_uri() ) ); ?>"> -->
 							<!-- <img class="uxd-footer__social-link" src="<?php echo esc_url( sprintf( '%s/icons/social-media/instagram-brands-white.svg', get_template_directory_uri() ) ); ?>"> -->
 							<a href="mailto:byu.uxd@gmail.com" target="_blank"><img class="uxd-footer__social-link" src="<?php echo esc_url( sprintf( '%s/icons/social-media/envelope-solid-white.svg', get_template_directory_uri() ) ); ?>"></a>
