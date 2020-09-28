@@ -13,7 +13,7 @@ $home_url = get_home_url();
 				<a href="<?php echo esc_url( $home_url ); ?>"><img class="uxd-footer__logo" src="<?php echo esc_url( sprintf( '%s/images/logo.png', get_template_directory_uri() ) ); ?>"></a>
 				<div class="uxd-footer__grid uxd-footer__grid--borders">
 					<div class="uxd-footer__grid-column">
-						<a class="uxd-footer__link" href="<?php echo esc_url( sprintf( '%s/join', $home_url ) ); ?>">Join</a>
+						<a class="uxd-footer__link" href="https://clubs.byu.edu/clubs#/byuxd" target="_blank">Join</a>
 						<a class="uxd-footer__link" href="<?php echo esc_url( sprintf( '%s/events', $home_url ) ); ?>">Events</a>
 						<a class="uxd-footer__link" href="<?php echo esc_url( sprintf( '%s/what-is-uxd', $home_url ) ); ?>">What is UXD?</a>
 					</div>
@@ -28,7 +28,7 @@ $home_url = get_home_url();
 							<a href="https://byuuxdclub.slack.com/" target="_blank"><img class="uxd-footer__social-link" src="<?php echo esc_url( sprintf( '%s/icons/social-media/slack-brands-white.svg', get_template_directory_uri() ) ); ?>"></a>
 							<a href="https://www.linkedin.com/company/byu-uxd-association/" target="_blank"><img class="uxd-footer__social-link" src="<?php echo esc_url( sprintf( '%s/icons/social-media/linkedin-brands-white.svg', get_template_directory_uri() ) ); ?>"></a>
 							<!-- <img class="uxd-footer__social-link" src="<?php echo esc_url( sprintf( '%s/icons/social-media/twitter-brands-white.svg', get_template_directory_uri() ) ); ?>"> -->
-							<!-- <img class="uxd-footer__social-link" src="<?php echo esc_url( sprintf( '%s/icons/social-media/instagram-brands-white.svg', get_template_directory_uri() ) ); ?>"> -->
+							<a href="https://www.instagram.com/byu.uxd/" target="_blank"><img class="uxd-footer__social-link" src="<?php echo esc_url( sprintf( '%s/icons/social-media/instagram-brands-white.svg', get_template_directory_uri() ) ); ?>"></a>
 							<a href="mailto:byu.uxd@gmail.com" target="_blank"><img class="uxd-footer__social-link" src="<?php echo esc_url( sprintf( '%s/icons/social-media/envelope-solid-white.svg', get_template_directory_uri() ) ); ?>"></a>
 						</div>
 						<a class="uxd-footer__link" href="https://byu.us10.list-manage.com/subscribe?u=c7b89a067a3b921928fdfe62f&id=0f1edc5f72" target="_blank">Subscribe to Newsletter</a>

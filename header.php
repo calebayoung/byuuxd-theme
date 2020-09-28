@@ -15,7 +15,7 @@ $template_directory_url = get_template_directory_uri();
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="theme-color" content="#fa2617">
-		<title>BYU UXD Club</title>
+		<title>BYU UXD Association</title>
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
@@ -25,7 +25,7 @@ $template_directory_url = get_template_directory_uri();
 					<img class="uxd-header__logo" src="<?php echo esc_url( sprintf( '%s/images/logo.png', $template_directory_url ) ); ?>">
 				</a>
 				<nav class="uxd-header__desktop-nav">
-					<a class="uxd-header__desktop-link<?php echo esc_attr( is_active_header_link( 'join' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/join', $home_url ) ); ?>">Join</a>
+					<a class="uxd-header__desktop-link<?php echo esc_attr( is_active_header_link( 'join' ) ); ?>" href="https://clubs.byu.edu/clubs#/byuxd" target="_blank">Join</a>
 					<a class="uxd-header__desktop-link<?php echo esc_attr( is_active_header_link( 'events' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/events', $home_url ) ); ?>">Events</a>
 					<a class="uxd-header__desktop-link<?php echo esc_attr( is_active_header_link( 'what-is-uxd' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/what-is-uxd', $home_url ) ); ?>">What is UXD?</a>
 					<a class="uxd-header__desktop-link<?php echo esc_attr( is_active_header_link( 'resources' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/resources', $home_url ) ); ?>">Resources</a>

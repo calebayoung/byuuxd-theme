@@ -381,11 +381,6 @@ body {
 .uxd-main li {
 	text-align: left;
 	padding-left: 0.5rem;
-	margin: 0 0 2rem;
-}
-
-.uxd-main li:last-of-type {
-	margin-bottom: 0;
 }
 
 .uxd-main a {
@@ -637,6 +632,8 @@ body {
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 1px;
+	padding-bottom: 0.25rem;
+	border-bottom: 1px solid var(--uxd-red);
 	margin: 3rem 1.5rem;
 }
 
