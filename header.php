@@ -28,8 +28,10 @@ $template_directory_url = get_template_directory_uri();
 					<a class="uxd-header__desktop-link<?php echo esc_attr( is_active_header_link( 'join' ) ); ?>" href="https://clubs.byu.edu/clubs#/byuxd" target="_blank">Join</a>
 					<a class="uxd-header__desktop-link<?php echo esc_attr( is_active_header_link( 'events' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/events', $home_url ) ); ?>">Events</a>
 					<a class="uxd-header__desktop-link<?php echo esc_attr( is_active_header_link( 'what-is-uxd' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/what-is-uxd', $home_url ) ); ?>">What is UXD?</a>
-					<a class="uxd-header__desktop-link<?php echo esc_attr( is_active_header_link( 'resources' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/resources', $home_url ) ); ?>">Resources</a>
-					<a class="uxd-header__desktop-link<?php echo esc_attr( is_active_header_link( 'internships' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/internships', $home_url ) ); ?>">Internships</a>
+					<a class="uxd-header__desktop-link<?php echo esc_attr( is_active_header_link( 'resources' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/resources', $home_url ) ); ?>">UXD Resources</a>
+					<a class="uxd-header__desktop-link<?php echo esc_attr( is_active_header_link( 'classes' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/classes', $home_url ) ); ?>">Classes</a>
+					<a class="uxd-header__desktop-link<?php echo esc_attr( is_active_header_link( 'internships' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/internships', $home_url ) ); ?>">Internships/Jobs</a>
+					<a class="uxd-header__desktop-link<?php echo esc_attr( is_active_header_link( 'meeting-notes' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/meeting-notes', $home_url ) ); ?>">Meeting Notes</a>
 					<a class="uxd-header__desktop-link<?php echo esc_attr( is_active_header_link( 'contact-us' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/contact-us', $home_url ) ); ?>">Contact Us</a>
 				</nav>
 				<img class="uxd-header__menu-icon uxd-header__menu-icon--open" src="<?php echo esc_url( sprintf( '%s/icons/bars-solid.svg', $template_directory_url ) ); ?>">
@@ -42,8 +44,10 @@ $template_directory_url = get_template_directory_uri();
 				<a class="uxd-header__mobile-link<?php echo esc_attr( is_active_header_link( 'join' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/join', $home_url ) ); ?>">Join</a>
 				<a class="uxd-header__mobile-link<?php echo esc_attr( is_active_header_link( 'events' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/events', $home_url ) ); ?>">Events</a>
 				<a class="uxd-header__mobile-link<?php echo esc_attr( is_active_header_link( 'what-is-uxd' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/what-is-uxd', $home_url ) ); ?>">What is UXD?</a>
-				<a class="uxd-header__mobile-link<?php echo esc_attr( is_active_header_link( 'resources' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/resources', $home_url ) ); ?>">Resources</a>
-				<a class="uxd-header__mobile-link<?php echo esc_attr( is_active_header_link( 'internships' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/internships', $home_url ) ); ?>">Internships</a>
+				<a class="uxd-header__mobile-link<?php echo esc_attr( is_active_header_link( 'resources' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/resources', $home_url ) ); ?>">UXD Resources</a>
+				<a class="uxd-header__mobile-link<?php echo esc_attr( is_active_header_link( 'classes' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/classes', $home_url ) ); ?>">Classes</a>
+				<a class="uxd-header__mobile-link<?php echo esc_attr( is_active_header_link( 'internships' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/internships', $home_url ) ); ?>">Internships/Jobs</a>
+				<a class="uxd-header__mobile-link<?php echo esc_attr( is_active_header_link( 'meeting-notes' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/meeting-notes', $home_url ) ); ?>">Meeting Notes</a>
 				<a class="uxd-header__mobile-link<?php echo esc_attr( is_active_header_link( 'contact-us' ) ); ?>" href="<?php echo esc_url( sprintf( '%s/contact-us', $home_url ) ); ?>">Contact Us</a>
 			</div>
 		</header>

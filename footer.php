@@ -38,9 +38,9 @@ $home_url = get_home_url();
 					<div class="uxd-footer__grid-column uxd-footer__grid-column--span-two">
 						<p class="uxd-footer__text">Icons provided by <a class="uxd-footer__link" href="https://fontawesome.com/license" target="_blank">FontAwesome</a> (no changes made)</p>
 					</div>
-					<div class="uxd-footer__grid-column">
+<!-- 					<div class="uxd-footer__grid-column">
 						<p class="uxd-footer__text">This site is proudly powered by <a class="uxd-footer__link" href="https://wordpress.org/" target="_blank">WordPress</a></p>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</footer>

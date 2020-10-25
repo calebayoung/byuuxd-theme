@@ -24,7 +24,7 @@ get_header();
 	<a class="uxd-button-link" href="https://byu.us10.list-manage.com/subscribe?u=c7b89a067a3b921928fdfe62f&id=0f1edc5f72" target="_blank">Subscribe to Newsletter</a>
 	<div class="uxd-hero__social-icons">
 		<a href="https://www.facebook.com/BYUUXD/" target="_blank"><img class="uxd-hero__social-icon" src="<?php echo esc_url( sprintf( '%s/facebook-brands-red.svg', $social_icons_directory ) ); ?>"></a>
-		<a href="https://byuuxdclub.slack.com/" target="_blank"><img class="uxd-hero__social-icon" src="<?php echo esc_url( sprintf( '%s/slack-brands-red.svg', $social_icons_directory ) ); ?>"></a>
+		<a href="https://join.slack.com/t/byuuxdclub/shared_invite/zt-i92sb6yv-Pd_W_HeRnMg8KJJscVX6Yg" target="_blank"><img class="uxd-hero__social-icon" src="<?php echo esc_url( sprintf( '%s/slack-brands-red.svg', $social_icons_directory ) ); ?>"></a>
 		<a href="https://www.linkedin.com/company/byu-uxd-association/" target="_blank"><img class="uxd-hero__social-icon" src="<?php echo esc_url( sprintf( '%s/linkedin-brands-red.svg', $social_icons_directory ) ); ?>"></a>
 		<!-- <img class="uxd-hero__social-icon" src="<?php echo esc_url( sprintf( '%s/twitter-brands-red.svg', $social_icons_directory ) ); ?>"> -->
 		<a href="https://www.instagram.com/byu.uxd/" target="_blank"><img class="uxd-hero__social-icon" src="<?php echo esc_url( sprintf( '%s/instagram-brands-red.svg', $social_icons_directory ) ); ?>"></a>
@@ -38,7 +38,7 @@ get_header();
 	<h2 class="uxd-title">Zoom Meeting Link</h2>
 	<hr class="uxd-title-border">
 	<p><a href="https://byu.zoom.us/j/92805468405?pwd=bzVNaHlOQllqTEp3a3FUbzdmUXZ5UT09" target="_blank">Click here</a> to join the club Zoom meeting.</p>
-	<p>Association meetings are each Wednesday at 7pm (Mountain Time).</p>
+	<p>Association meetings are held each Wednesday at 7pm (Mountain Time).</p>
 </main>
 <?php
 $events_counter = 0;
@@ -119,7 +119,7 @@ foreach ( $events_query->posts as $event ) {
 			<strong>Networking</strong> to start bridging the gap between students and employers
 		</p>
 	</div>
-	<a class="uxd-button-link" href="<?php echo esc_url( sprintf( '%s/resources', $home_url ) ); ?>">Learn More</a>
+<!-- 	<a class="uxd-button-link" href="<?php echo esc_url( sprintf( '%s/resources', $home_url ) ); ?>">Learn More</a> -->
 	<!-- <h2 class="uxd-title">How to Get Started</h2>
 	<hr class="uxd-title-border">
 	<ol>
