@@ -13,14 +13,12 @@ get_header();
 </main>
 <div class="uxd-events-archive">
 	<?php
+	$current_time = strtotime( '-1 day' );
 	if ( have_posts() ) {
 		while ( have_posts() ) {
 			the_post();
-			$current_time = strtotime( 'today' );
 			$event_time   = strtotime( get_field( 'date_time' ) );
-			if ( $current_time > $event_time ) {
-				continue;
-			} else {
+			if ( $current_time < $event_time ) {
 				$event_args = array(
 					'event_title'    => get_the_title(),
 					'event_link'     => get_permalink( get_the_ID() ),
