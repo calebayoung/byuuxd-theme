@@ -13,5 +13,9 @@ jQuery( ( $ ) => {
 				mobileNav.height( 0 );
 			}
 		} );
+		$( '.uxd-event__calendar-link' ).on( 'click', function ( event ) {
+			event.preventDefault();
+			window.open( $( this ).data( 'calendar-link' ), '_blank' );
+		} );
 	} );
 } );

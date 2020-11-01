@@ -71,14 +71,15 @@ foreach ( $events_query->posts as $event ) {
 		if ( $events_counter < 4 && $current_time < $event_time ) {
 			$events_counter++;
 			$event_args = array(
-				'event_title'    => $event->post_title,
-				'event_link'     => get_permalink( $event->ID ),
-				'event_month'    => gmdate( 'F', $event_time ),
-				'event_day'      => gmdate( 'j', $event_time ),
-				'event_weekday'  => gmdate( 'l', $event_time ),
-				'event_host'     => get_field( 'event_host', $event->ID ),
-				'event_time'     => gmdate( 'g:ia', $event_time ),
-				'event_location' => get_field( 'location', $event->ID ),
+				'event_title'         => $event->post_title,
+				'event_link'          => get_permalink( $event->ID ),
+				'event_month'         => gmdate( 'F', $event_time ),
+				'event_day'           => gmdate( 'j', $event_time ),
+				'event_weekday'       => gmdate( 'l', $event_time ),
+				'event_host'          => get_field( 'event_host', $event->ID ),
+				'event_time'          => gmdate( 'g:ia', $event_time ),
+				'event_location'      => get_field( 'location', $event->ID ),
+				'event_calendar_link' => get_field( 'google_calendar_link', $event->ID ),
 			);
 			get_template_part( 'template-parts/uxd-event', null, $event_args );
 		}

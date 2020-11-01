@@ -20,14 +20,15 @@ get_header();
 			$event_time   = strtotime( get_field( 'date_time' ) );
 			if ( $current_time < $event_time ) {
 				$event_args = array(
-					'event_title'    => get_the_title(),
-					'event_link'     => get_permalink( get_the_ID() ),
-					'event_month'    => gmdate( 'F', $event_time ),
-					'event_day'      => gmdate( 'j', $event_time ),
-					'event_weekday'  => gmdate( 'l', $event_time ),
-					'event_host'     => get_field( 'event_host' ),
-					'event_time'     => gmdate( 'g:ia', $event_time ),
-					'event_location' => get_field( 'location' ),
+					'event_title'         => get_the_title(),
+					'event_link'          => get_permalink( get_the_ID() ),
+					'event_month'         => gmdate( 'F', $event_time ),
+					'event_day'           => gmdate( 'j', $event_time ),
+					'event_weekday'       => gmdate( 'l', $event_time ),
+					'event_host'          => get_field( 'event_host' ),
+					'event_time'          => gmdate( 'g:ia', $event_time ),
+					'event_location'      => get_field( 'location' ),
+					'event_calendar_link' => get_field( 'google_calendar_link', $event->ID ),
 				);
 				get_template_part( 'template-parts/uxd-event', null, $event_args );
 			}

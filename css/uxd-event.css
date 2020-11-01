@@ -58,7 +58,7 @@
 .uxd-event__date {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	font-family: var(--ringside-ssm);
 	font-weight: 600;
@@ -68,6 +68,15 @@
 	padding: 1rem;
 	border-top-left-radius: var(--uxd-border-radius);
 	border-top-right-radius: var(--uxd-border-radius);
+}
+
+.uxd-event__date-constraint {
+	height: 100%;
+	max-height: 160px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .uxd-event__month {
@@ -88,6 +97,7 @@
 .uxd-event__info {
 	display: flex;
 	flex-direction: column;
+	flex: 1;
 	padding: 1rem 2rem;
 }
 
@@ -108,6 +118,27 @@
 	font-family: var(--ringside-ssm);
 	color: var(--byu-grey-dark);
 	margin: 0.75rem 0 0.5rem;
+}
+
+.uxd-event__calendar-link {
+	font-family: var(--ringside-ssm);
+	font-size: 0.9rem;
+	color: var(--uxd-red-dark);
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 1.3;
+	background-color: #fff;
+	padding: 0.55rem;
+	border: 1px solid var(--uxd-red);
+	border-radius: var(--uxd-border-radius);
+	outline: none;
+	margin-top: 1rem;
+}
+
+.uxd-event__calendar-link:hover {
+	cursor: pointer;
+	color: #fff;
+	background-color: var(--uxd-red);
 }
 
 @media (min-width: 640px) {

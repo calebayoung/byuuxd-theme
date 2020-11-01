@@ -11,9 +11,11 @@
 <a class="uxd-event__link" href="<?php echo esc_url( $args['event_link'] ); ?>">
 	<div class="uxd-event">
 		<div class="uxd-event__date">
-			<p class="uxd-event__month"><?php echo esc_html( $args['event_month'] ); ?></p>
-			<p class="uxd-event__day-number"><?php echo esc_html( $args['event_day'] ); ?></p>
-			<p class="uxd-event__day"><?php echo esc_html( $args['event_weekday'] ); ?></p>
+			<div class="uxd-event__date-constraint">
+				<p class="uxd-event__month"><?php echo esc_html( $args['event_month'] ); ?></p>
+				<p class="uxd-event__day-number"><?php echo esc_html( $args['event_day'] ); ?></p>
+				<p class="uxd-event__day"><?php echo esc_html( $args['event_weekday'] ); ?></p>
+			</div>
 		</div>
 		<div class="uxd-event__info">
 			<h2 class="uxd-event__title"><?php echo esc_html( $args['event_title'] ); ?></h2>
@@ -26,6 +28,13 @@
 				}
 				?>
 			</p>
+			<?php
+			if ( ! empty( $args['event_calendar_link'] ) ) {
+				?>
+				<button class="uxd-event__calendar-link" data-calendar-link="<?php echo esc_url( $args['event_calendar_link'] ); ?>">+ Add to Calendar</button>
+				<?php
+			}
+			?>
 		</div>
 	</div>
 </a>
