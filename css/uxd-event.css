@@ -121,6 +121,7 @@
 }
 
 .uxd-event__calendar-link {
+	display: none;
 	font-family: var(--ringside-ssm);
 	font-size: 0.9rem;
 	color: var(--uxd-red-dark);
@@ -153,6 +154,13 @@
 		min-width: 125px;
 		border-top-right-radius: unset;
 		border-bottom-left-radius: var(--uxd-border-radius);
+	}
+}
+
+@media (min-width: 1024px) {
+
+	.uxd-event__calendar-link {
+		display: block;
 	}
 }
 
